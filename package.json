@@ -7,8 +7,7 @@
     "build": "npm run build-code && npm run build-bundle",
     "build-code": "tsc",
     "build-bundle": "esbuild build/catinator.js --sourcemap --bundle --outfile=dist/catinator.cjs --platform=node --format=cjs --external:@nodegui/nodegui \"--external:nodegui-plugin-*\"",
-    "package": "jam-pack-nodegui --config packaging/jam-pack-nodegui.json",
-    "run": "qode dist/catinator.cjs",
+    "run": "node dist/catinator.cjs",
     "test": "jest"
   },
   "repository": {
@@ -18,22 +17,17 @@
   "keywords": [
     "nodegui"
   ],
-  "author": "Simon Edwards",
+  "author": "Erik Lee",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sedwards2009/nodegui-simple-starter/issues"
-  },
-  "homepage": "https://github.com/sedwards2009/nodegui-simple-starter#readme",
+  "homepage": "",
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@types/node": "^22.5.4",
     "esbuild": "^0.23.1",
-    "jam-pack-nodegui": "^0.19.0",
     "jest": "^29.7.0",
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "@nodegui/nodegui": "^0.67.0",
     "source-map-support": "^0.5.21"
   }
 }
