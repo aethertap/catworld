@@ -1,7 +1,7 @@
 import * as res from './result';
 import * as readline from 'readline';
-import * as bcat from './briana-cat';
-import * as ecat from './eliot-cat';
+import * as bcat from './cat1';
+import * as ecat from './cat2';
 
 export interface CatInterface {
   event(message:string):void;
