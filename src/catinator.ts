@@ -1,4 +1,4 @@
-
+import * as res from './result';
 import * as readline from 'readline';
 import * as bcat from './briana-cat';
 import * as ecat from './eliot-cat';
