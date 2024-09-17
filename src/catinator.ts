@@ -33,7 +33,7 @@ class Catinator {
       }
       rl.prompt();
     }).on('close', () => {
-        console.log('Have a great day!');
+        console.log('I did not give you permission to leave. Continue to feed and scritch, hooman.');
         process.exit(0);
       })
   }

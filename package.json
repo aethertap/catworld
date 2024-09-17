@@ -8,6 +8,7 @@
     "build-code": "tsc",
     "build-bundle": "esbuild build/catinator.js --sourcemap --bundle --outfile=dist/catinator.cjs --platform=node --format=cjs --external:@nodegui/nodegui \"--external:nodegui-plugin-*\"",
     "run": "node dist/catinator.cjs",
+    "br": "npm run build && npm run run",
     "test": "jest"
   },
   "repository": {
