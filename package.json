@@ -6,18 +6,11 @@
   "scripts": {
     "build": "npm run build-code && npm run build-bundle",
     "build-code": "tsc",
-    "build-bundle": "esbuild build/catinator.js --sourcemap --bundle --outfile=dist/catinator.cjs --platform=node --format=cjs --external:@nodegui/nodegui \"--external:nodegui-plugin-*\"",
+    "build-bundle": "esbuild build/catinator.js --sourcemap --bundle --outfile=dist/catinator.cjs --platform=node --format=cjs",
     "run": "node dist/catinator.cjs",
     "br": "npm run build && npm run run",
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sedwards2009/nodegui-simple-starter.git"
-  },
-  "keywords": [
-    "nodegui"
-  ],
   "author": "Erik Lee",
   "license": "MIT",
   "homepage": "",
