@@ -3,7 +3,7 @@ import { Update, StateChange } from "./states/types"
 import State from "./states/state";
 
 
-class StateMachine {
+export default class StateMachine {
   active_state: State
   constructor(initial_state: State){
     this.active_state = initial_state;
@@ -20,16 +20,4 @@ class StateMachine {
   }
 }
 
-function state_main() {
-  let state = new Idle();
-  let sm = new StateMachine(state);
-  for(let i=0; i<100; i++) {
-    ;
-    if(i%10 == 0) {
-      sm.update({ dt:0.25, message:"Hey, ten." });
-    }
-    sm.update({dt:0.25});
-  }
-}
 
-state_main();
