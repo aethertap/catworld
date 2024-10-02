@@ -14,12 +14,4 @@ export default class Dead extends State {
 
     return undefined;
   }
-  
-  enter(): void {
-    super.enter()
-  }
-
-  leave(): void {
-    super.leave()
-  }
 }
