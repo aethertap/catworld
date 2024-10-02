@@ -1,6 +1,9 @@
 import State from "./state"
 
-export type StateChange = State | undefined;
+export type MaybeState = ChangeState | KeepState;
+export type ChangeState = State;
+export type KeepState = undefined;
+
 
 export interface Update {
   dt: number,
