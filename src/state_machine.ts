@@ -1,5 +1,4 @@
-import Idle from "./states/idle";
-import { Update, StateChange } from "./states/types"
+import { Update, MaybeState } from "./states/types"
 import State from "./states/state";
 
 

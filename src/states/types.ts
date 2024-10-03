@@ -4,6 +4,7 @@ export type MaybeState = ChangeState | KeepState;
 export type ChangeState = State;
 export type KeepState = undefined;
 
+export type MaybeUpdate = Tick | Kick | Feed | Scritch | undefined;
 
 export class Update {
   kind: string
