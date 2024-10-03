@@ -1,18 +1,12 @@
 import * as readline from 'readline';
-import * as bcat from './cat1';
-import * as ecat from './cat2';
-import {MaybeUpdate,Kick,Feed,Scritch} from './states/types';
-
-export interface CatInterface {
-  event(message:string):void;
-  update(dt:number):void;
-}
+import Cat from './cat';
+import {MaybeUpdate,Kick,Feed,Scritch,Update,Tick} from './states/types';
 
 class Catinator {
-  sack: CatInterface[]
+  sack: Cat[]
   last_update_time:number
   
-  constructor(sack:CatInterface[]) {
+  constructor(sack:Cat[]) {
     this.sack = sack;
     this.last_update_time = Date.now();
   }
@@ -21,7 +15,7 @@ class Catinator {
     const rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout,
-      prompt: 'slay the riz, dude bro> ',
+      prompt: 'o. hai> ',
     });
 
     rl.prompt();
@@ -45,7 +39,7 @@ class Catinator {
       }
       if(event) {
         for(let cat of this.sack) {
-          cat.event(lin);
+          cat.update(event);
         }
       }
       rl.prompt();
@@ -67,7 +61,7 @@ class Catinator {
     let dt = (now-this.last_update_time)/1000.0;
     if(dt > 0.1) {
       for(let cat of this.sack) {
-        cat.update(dt);
+        cat.update(new Tick(dt));
       }
       this.last_update_time = now;
     }
@@ -76,7 +70,7 @@ class Catinator {
 
 
 function main() {
-  let ci = new Catinator([new bcat.Kitten, new ecat.Cat]);
+  let ci = new Catinator([new Cat()]);
   ci.loop();
 }
 

@@ -1,8 +1,4 @@
 import State from "./state";
-import Scared from "./scared";
-import Hungry from "./hungry";
-import {Tick} from "./types";
-
 import { MaybeState, Update } from "./types";
 
 

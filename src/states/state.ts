@@ -27,7 +27,7 @@ export default class State {
   // states sometimes, and keeping track of time other times. In order to change states, you should
   // return a new state from this function!
   update(event: Update): MaybeState {
-    console.log(`State=${this.name}.update(${JSON.stringify(event)})`);
+    //console.log(`State=${this.name}.update(${JSON.stringify(event)})`);
     return this;
   }
 
